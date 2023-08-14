@@ -1,0 +1,23 @@
+syntax = "proto3";
+package info;
+message Req {
+    string filename = 1;
+}
+message Info {
+    float money = 1;
+    string bank = 2;
+    string name = 3;
+    string remark = 4;
+    string time = 5;
+}
+message ArrInfo {
+    repeated Info Ainfo = 1;
+}
+message Rsp{
+    repeated ArrInfo villagesInfo = 1; //repeated villiage info
+    ArrInfo otherInfo = 2;
+    bool errCode = 3;
+}
+service GetInfoService {
+    rpc GetInfo (Req) returns (Rsp);
+}
