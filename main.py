@@ -27,7 +27,7 @@ class GetInfoService(info_pb2_grpc.GetInfoService):
         # float money = 1;
         # string bank = 2;
         # string name = 3;
-        # string remak = 4;
+        # string remark = 4;
         # string time = 5;
         otherInfo = info_pb2.ArrInfo()
         for k in other:

@@ -1,15 +1,27 @@
 import xlrd
+import requests
+from config import getUrl
+
+url = getUrl()
 def im_data(FileName):
     data = xlrd.open_workbook(FileName,encoding_override="utf-8")
     table = data.sheets()[0]
     nrows = table.nrows
     ncols = table.ncols
-    villages = ["四明山","贯子头","沙子","大力元","保方","黄茶园","张家排","岭口","西岭","陡角头","回龙","胡家桥","堆子头"]
-
-
+    # villages通过api接口去获取
+    
+    villages = []
+    rsp = requests.get(url + "/village")
+    rsp = rsp.json()
+    for i in rsp:
+        name = i['Name'][:-1]
+        villages.append(name)
+    print(villages)
     vdata = []
     other = []
 
+    
+    
     for i in villages:
         vdata.append([])
 
@@ -25,7 +37,7 @@ def im_data(FileName):
         if(money != "" and float(money) > 0):
             # 对money进行判断，只统计支出的钱
             flag = 0
-            for i in range(0,13):
+            for i in range(0,len(villages)):
                 if remark.count(villages[i]) > 0:
                     info = {
                     'money':money,

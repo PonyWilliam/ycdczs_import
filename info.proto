@@ -21,3 +21,8 @@ message Rsp{
 service GetInfoService {
     rpc GetInfo (Req) returns (Rsp);
 }
+
+//上面的是导入银行表提交给grpc的数据
+
+//下面的是制造往来资金报表提供给grpc的数据
+
