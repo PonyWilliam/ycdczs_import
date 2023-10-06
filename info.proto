@@ -4,11 +4,12 @@ message Req {
     string filename = 1;
 }
 message Info {
-    float money = 1;
-    string bank = 2;
-    string name = 3;
-    string remark = 4;
-    string time = 5;
+    string bankno = 1;
+    float money = 2;
+    string bank = 3;
+    string name = 4;
+    string remark = 5;
+    string time = 6;
 }
 message ArrInfo {
     repeated Info Ainfo = 1;
@@ -23,6 +24,4 @@ service GetInfoService {
 }
 
 //上面的是导入银行表提交给grpc的数据
-
-//下面的是制造往来资金报表提供给grpc的数据
 

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\ninfo.proto\x12\x04info\"\x17\n\x03Req\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\"O\n\x04Info\x12\r\n\x05money\x18\x01 \x01(\x02\x12\x0c\n\x04\x62\x61nk\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0e\n\x06remark\x18\x04 \x01(\t\x12\x0c\n\x04time\x18\x05 \x01(\t\"$\n\x07\x41rrInfo\x12\x19\n\x05\x41info\x18\x01 \x03(\x0b\x32\n.info.Info\"]\n\x03Rsp\x12#\n\x0cvillagesInfo\x18\x01 \x03(\x0b\x32\r.info.ArrInfo\x12 \n\totherInfo\x18\x02 \x01(\x0b\x32\r.info.ArrInfo\x12\x0f\n\x07\x65rrCode\x18\x03 \x01(\x08\x32\x31\n\x0eGetInfoService\x12\x1f\n\x07GetInfo\x12\t.info.Req\x1a\t.info.Rspb\x06proto3'
+  serialized_pb=b'\n\ninfo.proto\x12\x04info\"\x17\n\x03Req\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\"_\n\x04Info\x12\x0e\n\x06\x62\x61nkno\x18\x01 \x01(\t\x12\r\n\x05money\x18\x02 \x01(\x02\x12\x0c\n\x04\x62\x61nk\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0e\n\x06remark\x18\x05 \x01(\t\x12\x0c\n\x04time\x18\x06 \x01(\t\"$\n\x07\x41rrInfo\x12\x19\n\x05\x41info\x18\x01 \x03(\x0b\x32\n.info.Info\"]\n\x03Rsp\x12#\n\x0cvillagesInfo\x18\x01 \x03(\x0b\x32\r.info.ArrInfo\x12 \n\totherInfo\x18\x02 \x01(\x0b\x32\r.info.ArrInfo\x12\x0f\n\x07\x65rrCode\x18\x03 \x01(\x08\x32\x31\n\x0eGetInfoService\x12\x1f\n\x07GetInfo\x12\t.info.Req\x1a\t.info.Rspb\x06proto3'
 )
 
 
@@ -66,36 +66,43 @@ _INFO = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='money', full_name='info.Info.money', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='bank', full_name='info.Info.bank', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='bankno', full_name='info.Info.bankno', index=0,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='info.Info.name', index=2,
+      name='money', full_name='info.Info.money', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='bank', full_name='info.Info.bank', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='remark', full_name='info.Info.remark', index=3,
+      name='name', full_name='info.Info.name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='time', full_name='info.Info.time', index=4,
+      name='remark', full_name='info.Info.remark', index=4,
       number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='time', full_name='info.Info.time', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -113,7 +120,7 @@ _INFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=45,
-  serialized_end=124,
+  serialized_end=140,
 )
 
 
@@ -144,8 +151,8 @@ _ARRINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=126,
-  serialized_end=162,
+  serialized_start=142,
+  serialized_end=178,
 )
 
 
@@ -190,8 +197,8 @@ _RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=257,
+  serialized_start=180,
+  serialized_end=273,
 )
 
 _ARRINFO.fields_by_name['Ainfo'].message_type = _INFO
@@ -240,8 +247,8 @@ _GETINFOSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=259,
-  serialized_end=308,
+  serialized_start=275,
+  serialized_end=324,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetInfo',

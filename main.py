@@ -32,17 +32,20 @@ class GetInfoService(info_pb2_grpc.GetInfoService):
         otherInfo = info_pb2.ArrInfo()
         for k in other:
             info = info_pb2.Info()
+            info.bankno = k['bankno']
             info.money = float(k['money'])
             info.bank = k['bank']
             info.name = k['name']
             info.remark = k['remark']
             info.time = k['time']
+            
             otherInfo.Ainfo.append(info)
         villiage = []
         for j in vdata:
             Arrinfo = info_pb2.ArrInfo()
             for x in j:
                 info = info_pb2.Info()
+                info.bankno = x['bankno']
                 info.money = float(x['money'])
                 info.bank = x['bank']
                 info.name = x['name']

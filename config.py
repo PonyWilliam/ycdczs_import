@@ -10,7 +10,7 @@ back_url = ""
 if dev == 1:
     back_url = "http://localhost:7584"
 else:
-    back_url = "http://ycdback.dadiqq.cn"
+    back_url = "https://ycdback.dadiqq.cn"
 def getConf():
     return mysqlconf
 
